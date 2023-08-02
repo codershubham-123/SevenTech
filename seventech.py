@@ -21,10 +21,10 @@ def show_weather():
         w_label1.config(text='Please select a state and a city.')
     else:
         weather, description, temperature, pressure = data_get(state, city)
-        w_label1.config(text=f'Weather: {weather}')
-        wb_label1.config(text=f'Description: {description.capitalize()}')
-        temp_label1.config(text=f'Temperature: {temperature}°C')
-        pre_label1.config(text=f'Pressure: {pressure} hPa')
+        w_label1.config(text=weather)
+        wb_label1.config(text=description.capitalize())
+        temp_label1.config(text=f'{temperature}°C')
+        pre_label1.config(text=f'{pressure} hPa')
 
 def on_state_selected(event):
     selected_state = state_combobox.get()
